@@ -1,0 +1,443 @@
+body,
+html {
+  height: 100%;
+  margin: 0;
+  user-select: none;
+  cursor: default;
+  background-color: #141414;
+}
+/* Estilo para el contenedor de las secciones */
+@media screen and (min-aspect-ratio: 21/9) {
+  .App {
+    margin: 0 auto;
+    max-width: 1800px;
+  }
+  .testimonial img {
+    width: 100%;
+    height: 40vh;
+    aspect-ratio: 4 / 3; /* Esto hará que las imágenes sean más cuadradas */
+    object-fit: fill; /* Ajusta para controlar el espacio entre servicios */
+  }
+}
+.snap-container {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+/* Estilo para cada sección */
+.section {
+  height: 100vh; /* Asegura que cada sección ocupe toda la altura del viewport */
+  scroll-snap-align: start; /* Alinea la sección al inicio del contenedor al desplazarse */
+}
+.hero-section {
+  background-image: url("../../public/images/home.jpg");
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+.logo {
+  position: absolute;
+  top: 5rem; /* Espacio desde la parte superior de la pantalla */
+  left: 5rem; /* Espacio desde la parte izquierda de la pantalla */
+  width: auto; /* Ancho del logo basado en el ancho del viewport */
+  max-width: 200px; /* Un máximo para que no se vea demasiado grande en pantallas grandes */
+  height: auto;
+}
+@media (max-width: 768px) {
+  .logo {
+    width: 20vw; /* Un poco más pequeño en pantallas medianas */
+    top: 1.5rem;
+    left: 0.5rem;
+  }
+}
+
+.title1 {
+  font-family: "Anton", sans-serif;
+  font-weight: 400;
+  font-size: calc(8vw + 8vh);
+  font-style: italic;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+.title2 {
+  font-family: "Anton", sans-serif;
+  font-weight: 400;
+  font-size: 18vh;
+  font-style: italic;
+  color: #42338e;
+  margin: -8vh 0 0 0;
+  padding: 0;
+}
+@media (max-width: 480px) {
+  .title1 {
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-size: 14vh;
+    font-style: italic;
+    color: white;
+    margin: 0;
+    padding: 0;
+  }
+  .title2 {
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-size: 14vh;
+    font-style: italic;
+    color: #42338e;
+    margin: -8vh 0 0 0;
+    padding: 0;
+  }
+}
+.join-button {
+  background-color: #42338e;
+  color: white;
+  text-decoration: none;
+  padding: 1em 2em;
+  display: inline-block;
+  font-size: 1.5em;
+  transition: background-color 0.3s;
+  font-family: "Hanken Grotesk", sans-serif;
+}
+
+.join-button:hover {
+  background-color: #493b8d;
+}
+
+.about-us {
+  background-color: #141414;
+  background-size: contain;
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: left;
+  color: white;
+  position: relative;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 20px;
+}
+
+.about-us .text {
+  flex: 1;
+  padding: 6vh;
+}
+
+.about-us .subtitle {
+  font-family: "Anton", sans-serif;
+  font-weight: 400;
+  font-size: 10vh;
+  font-style: italic;
+  color: #42338e;
+  width: auto;
+  margin: 0;
+}
+.textaboutus {
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 3vh;
+  margin: 0;
+  width: 80%;
+}
+.readmore {
+  display: inline-block;
+  text-decoration: underline;
+  color: white;
+  margin-top: 3vh;
+  font-size: 3vh;
+}
+.about-us .img {
+  flex: 1;
+}
+.imgaboutus1 {
+  max-width: 100vw;
+  height: 50vh;
+  max-height: 30vw;
+  transform: translate(0%, -25%);
+}
+.imgaboutus2 {
+  max-width: 100vw;
+  height: 50vh;
+  max-height: 30vw;
+  transform: translate(10%, 25%);
+}
+@media (max-height: 1080px) {
+  /* When the viewport height is less than 800px */
+  .imgaboutus1 {
+    max-height: 30vw; /* Decrease the max-height */
+  }
+  .imgaboutus2 {
+    max-height: 30vw; /* Decrease the max-height */
+  }
+}
+
+@media (max-width: 480px) {
+  .imgaboutus1 {
+    display: none;
+  }
+  .imgaboutus2 {
+    display: none;
+  }
+  .about-us .subtitle {
+    font-size: 7vh;
+    width: 40vh;
+    text-align: center;
+  }
+  .about-us p {
+    width: 100%;
+    text-align: center;
+  }
+  .about-us a {
+    width: 100%;
+    text-align: center;
+  }
+}
+.services {
+  background-color: #141414;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+.services .text {
+  padding: 3vw 0 2vw 0;
+}
+.services h2 {
+  font-family: "Anton", sans-serif;
+  font-weight: 400;
+  font-size: 10vh;
+  font-style: italic;
+  color: #42338e;
+  width: auto;
+  margin: 0;
+}
+.services h3 {
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 3vh;
+  margin: 0 1em 1em 1em;
+}
+.services-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.service {
+  position: relative;
+  width: calc(25%);
+}
+
+.service img {
+  width: 100%;
+  height: 70vh;
+  object-fit: cover;
+  /* Ajusta para controlar el espacio entre servicios */
+}
+
+.service p {
+  font-family: "Anton", sans-serif;
+  font-weight: 400;
+  font-size: calc(1vw + 1vh + 0.5vmin);
+  position: absolute;
+  color: #fff;
+  padding: 5px;
+  bottom: 40%; /* Adjust as per requirement */
+  left: 50%; /* Center the text */
+  transform: translateX(-50%);
+}
+
+@media (max-width: 768px) {
+  .services {
+    background-color: #141414;
+    height: max-content;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+  }
+  .services-container {
+    flex-direction: column; /* Changes the flexbox direction to column */
+    align-items: center; /* Centers the services in the container */
+  }
+
+  .service {
+    width: 100%; /* The services will now take the full width */
+    margin-bottom: 20px; /* Adds space between the services */
+  }
+
+  .service img {
+    width: 80%; /* Ensures the image takes up the full width of its container */
+    height: 50vh; /* Keeps the image aspect ratio */
+  }
+
+  .service p {
+    position: absolute;
+    bottom: 10%; /* Adjust this as needed to position the text */
+    left: 50%; /* Centers the text horizontally */
+    transform: translate(-50%, -50%); /* Centers the text block */
+  }
+  .services h2 {
+    font-size: 8vh;
+  }
+}
+
+.testimonials {
+  background-color: #141414;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.testimonials h2 {
+  font-family: "Anton", sans-serif;
+  font-weight: 400;
+  font-size: 10vh;
+  font-style: italic;
+  color: #42338e;
+  width: 100%;
+  margin: 0 0 3rem 0;
+  padding: 4rem 0 0 0;
+  word-wrap: break-word;
+}
+.testimonials-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.testimonial {
+  position: relative;
+  width: calc(25%);
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonial img {
+  width: 100%;
+  height: auto;
+  max-height: 40vh;
+  aspect-ratio: 4 / 3; /* Esto hará que las imágenes sean más cuadradas */
+  object-fit: fill; /* Ajusta para controlar el espacio entre servicios */
+}
+.box {
+  background-color: #42338e;
+  margin: 0;
+  padding: 1rem;
+}
+.box p {
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 1000;
+  font-size: 2vh;
+  color: #fff;
+}
+.box footer {
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 600;
+  font-size: 2vh;
+  color: black;
+}
+
+@media (max-width: 768px) {
+  .testimonials {
+    height: max-content;
+  }
+  .testimonials h2 {
+    font-size: 8vh;
+  }
+  .testimonials-container {
+    flex-direction: column; /* Changes the flexbox direction to column */
+    align-items: center;
+    /* Centers the services in the container */
+  }
+  .testimonial {
+    width: 80%; /* Ensures the image takes up the full width of its container */
+    height: auto;
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 480px) {
+  .testimonials h2 {
+    font-size: 7vh;
+  }
+}
+.contact {
+  background-image: url("../../public/images/imgservices.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Set the height of the section to full viewport height */
+  color: #ffffff;
+}
+
+.contact .title {
+  height: 80vh;
+}
+.contact h2 {
+  font-family: "Anton", sans-serif;
+  position: relative;
+  font-weight: 400;
+  font-size: calc(5vw + 5vh);
+  font-style: italic;
+  color: #42338e;
+  top: 30vh;
+  width: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.contact-info {
+  display: flex;
+  width: 100%;
+  flex: 1; /* Takes up remaining space */
+  justify-content: space-evenly; /* Pushes the content to the bottom */
+  background-color: #493b8d;
+}
+.contact-item {
+  width: 30%;
+  text-align: center;
+  padding: 2rem 0 0 0;
+}
+.contact-item h3 {
+  font-family: "Anton", sans-serif;
+  font-style: italic;
+  margin: 0;
+  font-weight: 400;
+  font-size: calc(2vw + 2vh + 0.5vmin);
+  color: #ffffff;
+}
+
+.contact-item p {
+  font-family: "Hanken Grotesk", sans-serif;
+  margin: 0;
+  font-size: calc(1vw + 1vh + 0.5vmin);
+  color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .contact {
+    height: max-content;
+  }
+  .contact h2 {
+    text-align: center;
+  }
+  .contact-info {
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 2vh;
+  }
+  .contact-item h3 {
+    text-align: center;
+  }
+}
