@@ -3,17 +3,17 @@ import "../styles/navbar.css";
 
 function Navbar() {
   return (
-    <div class="navbar">
-      <div class="navbar-links">
+    <div className="navbar">
+      <div className="navbar-links">
         <ul>
           <li>
             <a href="#home">INICIO</a>
           </li>
           <li>
-            <a href="#quienes-somos">QUIENES SOMOS</a>
+            <a href="#quienes-somos">IDENTIDAD QENQO</a>
           </li>
           <li>
-            <a href="#servicios">SERVICIO</a>
+            <a href="#servicios">SERVICIOS</a>
           </li>
           <li>
             <a href="#testimonios">TESTIMONIOS</a>

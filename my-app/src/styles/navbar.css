@@ -3,17 +3,19 @@ ul,
 li,
 a {
   margin: 0;
-  padding: 0;
 }
 
 .navbar {
-  position: fixed;
-  top: 0;
-  display: flex;
-  justify-content: space-between;
-  padding: 10px 20px;
-  z-index: 1;
-  font-family: "Hanken Grotesk", sans-serif;
+    position: fixed;
+    top: 0;
+    left: 50%; /* Centrar horizontalmente el navbar */
+    transform: translateX(-50%); /* Ajustar el centrado correctamente */
+    display: flex;
+    justify-content: center; /* Alineación de los enlaces */
+    padding: 10px 20px;
+    z-index: 1;
+    font-family: "Hanken Grotesk", sans-serif;
+    margin: auto;
 }
 
 .navbar-links ul {
