@@ -12,14 +12,14 @@ function Services() {
         slidesToShow: 3,
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 3000,
+        autoplaySpeed: 2000,
         pauseOnHover: true,
     };
     const images = [
         { id: 1, src: '/images/img2aboutus.jpg', alt: 'Planes de Entrenamiento', title: 'PLANES DE ENTRENAMIENTO', url: "/planes-de-entrenamiento" },
         { id: 2, src: '/images/img2aboutus.jpg', alt: 'Artes Marciales', title: 'ARTES MARCIALES', url: "/artes-marciales" },
         { id: 3, src: '/images/img2aboutus.jpg', alt: 'Open Gym', title: 'OPEN GYM', url: "/open-gym" },
-        { id: 4, src: '/images/niños.jpg', alt: 'Niños', title: 'NIÑOS', url: "/niños" },
+        { id: 4, src: '/images/niños.jpg', alt: 'Niños', title: 'NIÑOS', url: "/ninos" },
         { id: 5, src: '/images/nutricion.jpg', alt: 'Nutrición', title: 'NUTRICIÓN', url: "/nutricion" },
     ];
 

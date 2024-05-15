@@ -10,7 +10,7 @@
     text-align: center;
     color: white;
     box-sizing: border-box;
-     padding-top: 30px;
+     padding-top: 5vh;
  }
 
 .services h2 {
@@ -20,7 +20,6 @@
     font-style: italic;
     color: #42338e;
     width: auto;
-
     margin: 0vh;
 }
 
