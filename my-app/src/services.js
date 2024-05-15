@@ -1,75 +1,48 @@
+import './styles/services.css';
+import React from 'react';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import { Link } from 'react-router-dom';
 function Services() {
-  return (
-      <div>
-          <section className="services section" id="servicios">
-              <h2>SERVICIOS</h2>
-              <h3>CENTRO DE PREPARACIÓN FÍSICA Y NUTRICIÓN</h3>
-              <div className="services-container">
-                  <div className="service">
-                      <img src="/images/img2aboutus.jpg" alt="Entrenamiento Semipersonalizado" />
-                      <p>ENTRENAMIENTO SEMIPERSONALIZADO</p>
-                  </div>
-                  <div className="service">
-                      <img src="/images/img2aboutus.jpg" alt="Entrenamiento Grupal" />
-                      <p>ENTRENAMIENTO GRUPAL</p>
-                  </div>
-                  <div className="service">
-                      <img src="/images/img2aboutus.jpg" alt="Entrenamiento Personalizado" />
-                      <p>ENTRENAMIENTO PERSONALIZADO</p>
-                  </div>
-              </div>
-          </section>
-          {/* Sección Testimonios */}
-          <section className="testimonials section" id="testimonios">
-              <div className="title">
-                  <h2>Testimonios /Entrenadores</h2>
-              </div>
-              {/* Ejemplo de Testimonio */}
-              <div className="testimonials-container">
-                  <div className="testimonial">
-                      <img src="/images/testimonio.jpeg" alt="Entrenamiento Semipersonalizado" />
-                      <div className='box'>
-                          <p>"Testimonials are short quotes from people who love your brand. It's a great way to convince customers to try your services."</p>
-                          <footer>— Donna Bleaker, 31</footer>
-                      </div>
-                  </div>
-                  <div className="testimonial">
-                      <img src="/images/testimonio.jpeg" alt="Entrenamiento Grupal" />
-                      <div className='box'>
-                          <p>"Testimonials are short quotes from people who love your brand. It's a great way to convince customers to try your services."</p>
-                          <footer>— Lauren Cross, 28</footer>
-                      </div>
-                  </div>
-                  <div className="testimonial">
-                      <img src="/images/testimonio.jpeg" alt="Entrenamiento Personalizado" />
-                      <div className='box'>
-                          <p>"Testimonials are short quotes from people who love your brand. It's a great way to convince customers to try your services."</p>
-                          <footer>— Thomas Xue, 44</footer>
-                      </div>
-                  </div>
-              </div>
-          </section>
-          <section className="contact section" id="contacto">
-              <div className='title'>
-                  <h2>CONTACTANOS</h2>
-              </div>
-              <div className="contact-info">
-                  <div className="contact-item">
-                      <h3>DIRECCIÓN:</h3>
-                      <p>QENQO</p>
-                  </div>
-                  <div className="contact-item">
-                      <h3>CORREO ELECTRÓNICO:</h3>
-                      <p>contacto@qenqo.com</p>
-                  </div>
-                  <div className="contact-item">
-                      <h3>TELÉFONO:</h3>
-                      <p>(123) 456-7890</p>
-                  </div>
-              </div>
-          </section>
-      </div>
-  )
+    const settings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        pauseOnHover: true,
+    };
+    const images = [
+        { id: 1, src: '/images/img2aboutus.jpg', alt: 'Planes de Entrenamiento', title: 'PLANES DE ENTRENAMIENTO', url: "/planes-de-entrenamiento" },
+        { id: 2, src: '/images/img2aboutus.jpg', alt: 'Artes Marciales', title: 'ARTES MARCIALES', url: "/artes-marciales" },
+        { id: 3, src: '/images/img2aboutus.jpg', alt: 'Open Gym', title: 'OPEN GYM', url: "/open-gym" },
+        { id: 4, src: '/images/niños.jpg', alt: 'Niños', title: 'NIÑOS', url: "/niños" },
+        { id: 5, src: '/images/nutricion.jpg', alt: 'Nutrición', title: 'NUTRICIÓN', url: "/nutricion" },
+    ];
+
+    return (
+        <div>
+            <section className="services section" id="servicios">
+                <h2>SERVICIOS</h2>
+                <h3>CENTRO DE PREPARACIÓN FÍSICA Y NUTRICIÓN</h3>
+                <Slider {...settings}>
+                    {images.map((image) => (
+                        <div key={image.id} className="carousel-slide">
+                            <Link to={image.url}>
+                                <div className="image-container">
+                                    <img src={image.src} alt={image.alt} className="carousel-image" />
+                                    <h3>{image.title}</h3>
+                                </div>
+                            </Link>
+                        </div>
+                    ))}
+                </Slider>
+            </section>
+        </div>
+    )
 }
 
 export default Services

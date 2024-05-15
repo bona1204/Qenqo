@@ -1,5 +1,6 @@
 import React from "react";
 import "../styles/navbar.css";
+import { Link } from 'react-router-dom';
 
 function Navbar() {
   return (
@@ -7,19 +8,19 @@ function Navbar() {
       <div className="navbar-links">
         <ul>
           <li>
-            <a href="#home">INICIO</a>
+            <Link to="/">INICIO</Link>
           </li>
           <li>
-            <a href="#quienes-somos">IDENTIDAD QENQO</a>
+            <Link href="#quienes-somos">IDENTIDAD QENQO</Link>
           </li>
           <li>
-            <a href="#servicios">SERVICIOS</a>
+            <Link to="/servicios">SERVICIOS</Link>
           </li>
           <li>
-            <a href="#testimonios">TESTIMONIOS</a>
+            <Link to="#testimonios">TESTIMONIOS</Link>
           </li>
           <li>
-            <a href="#contacto">CONTACTO</a>
+            <Link to="#contacto">CONTACTO</Link>
           </li>
         </ul>
       </div>

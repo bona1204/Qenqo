@@ -1,10 +1,8 @@
 import './styles/App.css';
-import Navbar from "./components/navbar.jsx";
 
 function Home() {
     return (
         <div className="App snap-container">
-          <Navbar />
           {/* Sección Hero */}
           <div className="hero-section section " id="home">
             <div>
