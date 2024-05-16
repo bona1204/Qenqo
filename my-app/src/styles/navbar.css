@@ -11,7 +11,7 @@ a {
     left: 50%; /* Centrar horizontalmente el navbar */
     transform: translateX(-50%); /* Ajustar el centrado correctamente */
     display: flex;
-    justify-content: center; /* Alineación de los enlaces */
+    justify-content: center; /* Alineaciï¿½n de los enlaces */
     padding: 10px 20px;
     z-index: 1;
     font-family: "Hanken Grotesk", sans-serif;

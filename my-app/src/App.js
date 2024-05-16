@@ -4,7 +4,7 @@ import Home from './Home';
 import Services from "./services"
 import Ninos from "./Ninos" 
 import Navbar from "./components/navbar.jsx";
-
+import Training from "./trainingplan.js";
 function App() {
   return (
     <Router>
@@ -13,6 +13,7 @@ function App() {
         <Route path="/" element={<Home/>} />
         <Route path="/servicios" element={<Services/>} />
         <Route path="/ninos" element={<Ninos/>} />
+        <Route path="/planes-de-entrenamiento" element={<Training/>} />
       </Routes>
     </Router>
   );
