@@ -21,47 +21,29 @@
 }
 
 .option {
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 20px;
-    width: calc(50% - 40px); /* Ajusta esta fórmula si es necesario para controlar el ancho */
-    margin: 10px; /* Añade margen para separar las opciones */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0); /* Fondo transparente */
+    padding: 0;
+    width: calc(50% - 30px); /* Ajuste del ancho */
+    margin: 10px;
+    position: relative; /* Posicionamiento relativo para el texto */
     display: flex;
-    flex-direction: column;
-    justify-content: center; /* Centra el contenido verticalmente */
-    align-items: center; /* Centra el contenido horizontalmente */
-}
-
-.option-image {
-    width: 100%;
-    height: 400px; /* Fija una altura específica para las imágenes */
-    object-fit: cover;
-    border-radius: 5px;
-}
-
-.option-details {
-    text-align: center;
-    margin-top: 10px;
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.25rem;
-    color: #FFF;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.75);
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Evita que la imagen desborde */
 }
 
 .reserve-button {
+    background-color: transparent; /* Fondo transparente */
+    color: white; /* Texto blanco */
     padding: 10px 20px;
-    background-color: #42338e;
-    color: white;
-    text-decoration: none;
+    border: 2px solid white; /* Borde blanco */
     border-radius: 5px;
-    margin-top: 10px;
-    transition: background-color 0.3s;
-    font-weight: 500;
     text-transform: uppercase;
+    transition: background-color 0.3s;
 }
+
 .reserve-button:hover {
-    background-color: #312a6c;
+    background-color: #42338e; /* Fondo al pasar el mouse */
 }
 
 @media (max-width: 768px) {
@@ -85,7 +67,7 @@
     font-size: 10vh; /* Tamaño grande basado en la altura de la ventana */
     font-style: italic;
     color: #42338e; /* Color morado específico */
-    margin: 0 0 20px 0; /* Remueve el margen por defecto para centrar correctamente */
+    margin: 100; /* Remueve el margen por defecto para centrar correctamente */
     width: 100%; /* Asegura que el título se extienda en todo el ancho disponible */
     text-align: center; /* Alinea el texto al centro horizontalmente */
     position: relative; /* Posicionamiento relativo para mover el título */

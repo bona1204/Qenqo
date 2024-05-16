@@ -28,4 +28,3 @@ function Ninos() {
 }
 
 export default Ninos;
-
